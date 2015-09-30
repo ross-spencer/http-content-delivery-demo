@@ -35,6 +35,14 @@
          <option value="File Transfert">File Transfert</option>
          <option value="File Transfer">File Transfer</option>
       </select>
+   Last-Modified: 
+      <!--E.G. Tue, 15 Nov 1994 12:45:26 GMT-->
+      <select name="lastmodified">
+         <option value="Thu, 01 Jan 1970 00:00:00 GMT">Thu, 01 Jan 1970 00:00:00 GMT</option>
+         <option value="Tue, 15 Nov 1994 12:45:26 GMT">Tue, 15 Nov 1994 12:45:26 GMT</option>
+         <option value="Wed, 25 Dec 1982 09:15:55 GMT">Wed, 25 Dec 1982 09:15:55 GMT</option>
+         <option value="Today">Today</option> <!--do not set the last-modified date-->
+      </select>      
    File: 
       <select name="file">
          <option value="file1.tga">file1.tga</option>
@@ -42,7 +50,7 @@
          <option value="file3.txt">file3.txt</option>
          <option value="file4.ppp">file4.ppp</option>
       </select>
-   <input type="submit" value="Login">
+   <input type="submit" value="Download">
 </form>
 </body>
 </html>
