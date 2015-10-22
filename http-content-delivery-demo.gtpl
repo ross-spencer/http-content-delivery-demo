@@ -38,7 +38,7 @@
    Last-Modified: 
       <!--E.G. Tue, 15 Nov 1994 12:45:26 GMT-->
       <select name="lastmodified">
-         <option value="Thu, 01 Jan 1970 00:00:00 GMT">Thu, 01 Jan 1970 00:00:00 GMT</option>
+         <option value="Thu, 01 Jan 1970 00:00:01 GMT">Thu, 01 Jan 1970 00:00:01 GMT</option>
          <option value="Tue, 15 Nov 1994 12:45:26 GMT">Tue, 15 Nov 1994 12:45:26 GMT</option>
          <option value="Wed, 25 Dec 1982 09:15:55 GMT">Wed, 25 Dec 1982 09:15:55 GMT</option>
          <option value="Today">Today</option> <!--do not set the last-modified date-->

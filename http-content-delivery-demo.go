@@ -1,24 +1,25 @@
 package main
 
 import (
-    "fmt"
+    "os"
     "html/template"
     "log"
     "net/http"
     "strings"
+    "time"
 )
 
 func filedownload(w http.ResponseWriter, r *http.Request) {
-   fmt.Println("method:", r.Method) //get request method
+   log.Println("Method:", r.Method) //get request method
    if r.Method == "GET" {
-      fmt.Println("path", r.URL.Path)
+      log.Println("path", r.URL.Path)
       t, _ := template.ParseFiles("http-content-delivery-demo.gtpl")
       t.Execute(w, nil)
    } else {
       r.ParseForm()
 
       // logic part of log in
-      fmt.Println(r.Form)
+      log.Println("Form: ", r.Form)
 
       file := r.Form.Get("file")
       dis := r.Form.Get("disposition") + ";filename=" + file
@@ -27,10 +28,10 @@ func filedownload(w http.ResponseWriter, r *http.Request) {
       encoding := r.Form.Get("transferencoding")
       lastmodified := r.Form.Get("lastmodified")
 
-      fmt.Println(dis)
-      fmt.Println(mime)
-      fmt.Println(description)
-      fmt.Println(encoding)
+      log.Println("Disposition:", dis)
+      log.Println("Mime:", mime)
+      log.Println("Description:", description)
+      log.Println("Encoding:", encoding)
 
       w.Header().Set("Content-Disposition", dis)
       w.Header().Set("Content-Type", mime)
@@ -39,11 +40,19 @@ func filedownload(w http.ResponseWriter, r *http.Request) {
 
       if strings.Compare("Today", lastmodified) != 0 {
          log.Println("Last modified date:", lastmodified)
+         t, _ := time.Parse(time.RFC1123, lastmodified)
+         log.Println("Time converted from browser:", t) 
+         os.Chtimes(file, t, t)
          w.Header().Set("Last-Modified", lastmodified)
+      } else {
+        currenttime := time.Now().Local()
+        os.Chtimes(file, currenttime, currenttime)
+
+        //Don't set header - Golang will set it - here as a note
+        //w.Header().Set("Last-Modified", currenttime.Format(time.RFC1123))
       }
 
-      fmt.Println(w.Header())
-
+      log.Println(w.Header())
       http.ServeFile(w, r, file)
     }
 }
