@@ -22,7 +22,8 @@ func filedownload(w http.ResponseWriter, r *http.Request) {
       log.Println("Form: ", r.Form)
 
       file := r.Form.Get("file")
-      dis := r.Form.Get("disposition") + ";filename=" + file
+      log.Println(r.Form.Get("disposition"))
+      dis := r.Form.Get("disposition") + "; filename=" + file 
       mime := r.Form.Get("mimetype")
       description := r.Form.Get("contentdescription")
       encoding := r.Form.Get("transferencoding")

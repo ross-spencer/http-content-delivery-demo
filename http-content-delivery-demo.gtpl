@@ -8,6 +8,9 @@
       <select name="disposition">
          <option value="inline">inline</option>
          <option value="attach">attachment</option>
+         <option value='attachment; modification-date="Thu, 01 Jan 1970 00:00:01 GMT"'>attachment; modification-date="Thu, 01 Jan 1970 00:00:01 GMT"</option>
+         <option value='attachment; modification-date="Tue, 15 Nov 1994 12:45:26 GMT"'>attachment; modification-date="Tue, 15 Nov 1994 12:45:26 GMT"</option>
+         <option value='attachment; modification-date="Wed, 25 Dec 1982 09:15:55 GMT"'>attachment; modification-date="Wed, 25 Dec 1982 09:15:55 GMT"</option>
       </select>
    MIMEType:
       <select name="mimetype">
