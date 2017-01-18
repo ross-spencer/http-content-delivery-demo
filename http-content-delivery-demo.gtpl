@@ -17,11 +17,19 @@
          <option value="">none</option>
          <option value="*/*">Any</option>
          <option value="application/rtf">application/rtf</option>
+
+         <!--PDF types-->
          <option value="application/pdf">application/pdf</option>
-         <option value="application/octet-stream">application/octet-stream</option>         
          <option value="application/postscript">application/postscript</option>
+         <option value="application/illustrator">application/illustrator</option>         
+
+         <!--Others...-->
+         <option value="application/octet-stream">application/octet-stream</option>         
+         <option value="audio/x-flac">audio/x-flac</option>         
+         
+         <!--text plain-->
          <option value="text/plain">text/plain</option>
-         <option value="text/plain; charset=utf-8">text/plain; charset=utf-8</option>         
+         <option value="text/plain; charset=utf-8">text/plain; charset=utf-8</option>            
          Content-Type: 
       </select>
    Content-Transfer-Encoding:
@@ -52,6 +60,8 @@
          <option value="file2.rtf">file2.rtf</option>
          <option value="file3.txt">file3.txt</option>
          <option value="file4.ppp">file4.ppp</option>
+         <option value="file5.ai">file5.ai</option>
+         <option value="file6.flac">file6.flac</option>
       </select>
    <input type="submit" value="Download">
 </form>
