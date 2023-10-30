@@ -1,21 +1,38 @@
 # http-content-delivery-demo
-A demo of server content delivery enabling users to select HTTP response headers for themselves.
 
-Primary purpose is to observe the effect of different HTTP response headers in various browsers after discovering quite wildly different behaviours in Internet Explorer vs. Chrome when delivering binary content 'inline'. This approximates the delivery of files from the Rosetta Long Term Preservation system v4.0.1 at least. 
+A demo of server content delivery enabling users to select HTTP response headers
+for themselves.
 
-###To run:
+Primary purpose is to observe the effect of different HTTP response headers in
+various browsers after discovering quite wildly different behaviours in Internet
+Explorer vs. Chrome when delivering binary content 'inline'. This approximates
+the delivery of files from the Rosetta Long Term Preservation system v4.0.1 at
+least.
 
-    $go build
-    $http-content-delivery-demo
-       2017/01/19 11:28:31 Server listening on port 2040.
-      
+## To run:
+
+```sh
+$go build
+$http-content-delivery-demo
+2017/01/19 11:28:31 Server listening on port 2040.
+```
+
 Access web-browser, http://127.0.0.1:2040
 
-##Content
+## Content
 
-Content here is either licensed under Archives New Zealand Catalogue terms, or provided as fair use for the purpose of archival research.
+Content here is either licensed under Archives New Zealand Catalogue terms, or
+provided as fair use for the purpose of archival research.
 
-##License
+## Content-disposition: Archival
+
+This small app is in support of the blog: *Content-disposition: Archival –
+Repatriating Dates on Access to Born-digital Records Online* on the
+[OPF website][opf-1].
+
+[opf-1]: https://openpreservation.org/blogs/content-disposition-archival-repatriating-dates-on-access-to-born-digital-records-online/?page=3&q=33
+
+## License
 
 Copyright (c) 2015 Ross Spencer
 
