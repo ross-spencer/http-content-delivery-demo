@@ -17,7 +17,7 @@ $http-content-delivery-demo
 2017/01/19 11:28:31 Server listening on port 2040.
 ```
 
-Access web-browser, http://127.0.0.1:2040
+Access the site in a web-browser with: http://127.0.0.1:2040
 
 ## Content
 
