@@ -1,9 +1,9 @@
 <html>
    <head>
-      <title>✉️ HTTP Content Delivery Demo ✉️</title>
+      <title>📬 HTTP Content Delivery Demo 📬</title>
    </head>
    <body>
-      <h1>✉️ HTTP Content Delivery Demo ✉️</h1>
+      <h1>📬 HTTP Content Delivery Demo 📬</h1>
       <h2>Introduction</h2>
       If you are looking at this page, you're likely looking at it locally.
       Please make sure you have run the shell script `./touch-all` in this
